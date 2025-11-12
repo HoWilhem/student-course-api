@@ -20,3 +20,9 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: npm install
+      - name: mettre en place eslint
+        run: npm run lint
+      - name: mettre en place pettier
+        run: npm run format
+      - name: lancer les tests en vérifiant la couverture maximale
+        run: npm test -- --coverage
